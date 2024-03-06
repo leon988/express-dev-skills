@@ -7,6 +7,9 @@ var skillsCtrl = require('../controllers/skills')
 // GET all skills
 router.get('/', skillsCtrl.index);
 
+// GET for the form --> /todos/new
+router.get('/new', skillsCtrl.new)
+
 // GET one todo -->  /skills/:id
 router.get('/:skillsId', skillsCtrl.show)
 
