@@ -8,9 +8,15 @@ var skillsCtrl = require('../controllers/skills')
 router.get('/', skillsCtrl.index);
 
 // GET for the form --> /todos/new
-router.get('/new', skillsCtrl.new)
+router.get('/new', skillsCtrl.new);
 
 // GET one todo -->  /skills/:id
-router.get('/:skillsId', skillsCtrl.show)
+router.get('/:skillsId', skillsCtrl.show);
+
+// POST a todo --> /todos
+router.post('/', skillsCtrl.create);  
+
+// DELETE a todo --> /todos/:id
+router.delete('/:id', skillsCtrl.delete);
 
 module.exports = router;

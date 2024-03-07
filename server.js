@@ -30,6 +30,8 @@ app.use(cookieParser());
 // If the request is for the static asset, returns that file
 app.use(express.static(path.join(__dirname, 'public')));
 
+app.use(methodOverride('_method')); 
+
 app.use(function(req, res, next) {
   console.log('Hello from custom middleware');
   res.locals.time = new Date().toLocaleTimeString();

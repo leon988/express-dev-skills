@@ -3,17 +3,17 @@
 <h3>Skills as of <%= time %></h3>
 
 <ul>
-  <% skills.forEach(function(t) { %>
+  <% skills.forEach(function(s) { %>
     <li>
 
-      <a href="/skills/<%= t.id %>"><%= t.skill %></a>
+      <a href="/skills/<%= s.id %>"><%= s.skill %></a>
         - 
-      <%= t.done ? 'done' : 'not done' %>
+      <%= s.done ? 'done' : 'not done' %>
     </li>
   <% }); %>
 </ul>
 
 
-  <a href="/skills/new">Add To-Do</a>
+  <a href="/skills/new">Add Skill</a>
 
 <%- include('../partials/footer') %>
