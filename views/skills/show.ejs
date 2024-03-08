@@ -3,19 +3,4 @@
   <h3><%= skill.skill %></h3>
   <h3>Complete: <%= skill.done ? 'Yes' : 'No' %></h3>
   
-  <ul>
-    <% skills.forEach(function(s) { %>
-      <li>
-        <form action="/skills/<%= s.id %>?_method=DELETE"
-          class="delete-form" method="POST">
-          <button type="submit">Delete Skill</button>
-        </form>
-
-        <a href="/skills/<%= s.id %>"><%= s.skill %></a>
-          - 
-        <%= s.done ? 'done' : 'not done' %>
-      </li>
-    <% }); %>
-  </ul>
-  
 <%- include('../partials/footer') %>
