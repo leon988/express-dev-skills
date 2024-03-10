@@ -7,16 +7,16 @@ var skillsCtrl = require('../controllers/skills')
 // GET all skills
 router.get('/', skillsCtrl.index);
 
-// GET for the form --> /todos/new
+// GET for the form --> /skills/new
 router.get('/new', skillsCtrl.new);
 
-// GET one todo -->  /skills/:id
+// GET one skill -->  /skills/:id
 router.get('/:skillsId', skillsCtrl.show);
 
-// POST a todo --> /todos
+// POST a skill --> /skills
 router.post('/', skillsCtrl.create);  
 
-// DELETE a todo --> /todos/:id
+// DELETE a skill --> /skills/:id
 router.delete('/:id', skillsCtrl.delete);
 
 module.exports = router;
